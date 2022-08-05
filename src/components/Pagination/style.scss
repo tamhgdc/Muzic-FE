@@ -1,0 +1,69 @@
+// react-responsive-pagination
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.full-pagination {
+    .page-link {
+        position: relative;
+        display: block;
+        padding: 0.5rem 0.75rem;
+        margin-left: -1px;
+        line-height: 1.25;
+        background-color: inherit;
+        border: none;
+        text-decoration: none;
+    }
+    
+    .page-link:hover {
+        z-index: 2;
+        color: white;
+        text-decoration: none;
+        background-color: #32389479;
+        cursor: pointer;
+    }
+    
+    .page-item:first-child .page-link {
+        margin-left: 0;
+    }
+    
+    .page-item.active .page-link {
+        z-index: 3;
+        color: white;
+        background-image: linear-gradient(to right,#3d84bed4,#42909e9e);
+    }
+
+    button {
+        width: fit-content;
+        border-radius: 0 !important;
+    }
+}
+
+.page-item.disabled .page-link {
+    opacity: 0.5;
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

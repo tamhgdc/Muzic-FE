@@ -1,0 +1,42 @@
+.left-menu {
+    background-color: #f3f3f3; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 100%;
+    z-index: 3;
+    padding: 10px;
+    font-size: 20px;
+    width: 250px;
+    position: fixed;
+    li{
+        a {
+            color: #3486bdd4 !important; 
+            margin-top: 10px;
+            border-radius: 5px;
+            display: flex;
+            white-space: nowrap;
+            text-overflow: clip;
+            overflow: hidden;
+            height: 50px;
+            align-items: center;
+            text-decoration: none;
+            padding: 0px 10px;
+            cursor: pointer;
+
+        }
+        a:hover, .active {
+            background-image: linear-gradient(to right,#3d84bed4,#42909e9e);
+            color: white !important;
+        }
+    }
+
+    li:first-child {
+        span {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+}

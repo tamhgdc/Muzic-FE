@@ -1,0 +1,25 @@
+.login-admin-page {
+    min-height: 100vh;
+    background-image: linear-gradient(#fefdff9e, #427cd3d4);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 450;
+            color: #094c72;
+        }
+    }
+}

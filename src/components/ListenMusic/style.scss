@@ -1,0 +1,316 @@
+.react-listen-music {
+    position: fixed;
+    z-index: 5;
+
+    .content-listen-music {
+        position: fixed;
+        height: calc(100% - 80px);
+        width: 100%;
+        background-color: rgb(141, 166, 187);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: overlay;
+
+        .music-tab {
+            width: 40%;
+            display: block;
+
+            span {
+                font-size: 18px;
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                padding: 5px;
+                color: #217dc9;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            span:first-child {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            span:last-child {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .music-tab-active {
+                background-color: #217dc9;
+                color: white;
+            }
+        }
+
+        .music-lyrics {
+            resize: none;
+            width: 40%;
+            height: 80%;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+
+            .music-info {
+                width: 100%;
+
+                img {
+                    width: 80%;
+                    max-width: 200px;
+                    border-radius: 100%;
+                }
+
+                .is-paused {
+                    animation-play-state: paused;
+                }
+
+                .music-name {
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+
+                .music-auth, .music-singer {
+                    font-size: 14px;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .music-comment {
+            width: 40%;
+            .upload-comment {
+                form {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 95%;
+                        height: 50px;
+                        resize: none;
+                        min-height: 0px !important;
+                    }
+
+                    button {
+                        border: none;
+                        font-size: 22px;
+                        background-color: inherit;
+                        color: #217dc9;
+
+                        &:hover {
+                            color: #0b5b9c;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+            .comment-content {
+                background-color: white;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .footer-listen-music {
+        position: fixed;
+        bottom: 0;
+        height: 80px;
+        background-color: rgb(141, 166, 187);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .music-info {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                height: 100%;
+            }
+
+            .music-name {
+                font-weight: 500;
+            }
+
+            .music-name:hover {
+                color: rgb(32, 182, 219);
+                cursor: pointer;
+            }
+
+            .music-singer {
+                font-size: 14px;
+                padding: 5px 0px;
+                color: white;
+            }
+        }
+
+        .music-control {
+            display: flex;
+            align-items: center;
+            audio {
+                outline: none !important;
+                border: none !important;
+                width: 600px;
+                height: 55px;
+            }
+    
+            audio::-webkit-media-controls-enclosure {
+                background-color: inherit;
+                outline: none !important;
+            }
+
+            .show-content-icon {
+                display: none;
+            }
+        }
+
+        .next-btn {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+
+        .prev-btn {
+            margin-right: 0;
+        }
+
+        .repeat {
+            color: rgb(8, 223, 151);
+        }
+
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+.is-playing {
+    -webkit-animation: rotating 6s linear infinite;
+    -moz-animation: rotating 6s linear infinite;
+    animation: rotating 6s linear infinite;
+    animation-play-state: running;
+}
+
+@-moz-keyframes  rotating { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes  rotating { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes  rotating { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+@media (max-width: 1200px) {
+    .react-listen-music {
+        .content-listen-music {
+
+            .music-tab {
+                width: 55%;
+            }
+    
+            .music-lyrics, .music-comment {
+                width: 55%;
+            }
+        }
+    
+        .footer-listen-music {
+    
+            .music-control {
+                display: flex;
+                align-items: center;
+                audio {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .react-listen-music {
+        .content-listen-music {
+
+            .music-tab {
+                width: 70%;
+            }
+    
+            .music-lyrics, .music-comment {
+                width: 70%;
+            }
+        }
+
+        .input-edit-comment {
+    
+            input {
+                width: 90% !important;
+            }
+        }
+    
+        .footer-listen-music {
+    
+            .music-control {
+                display: flex;
+                align-items: center;
+                audio {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+    .react-listen-music {
+
+        .content-listen-music {
+
+            .music-tab {
+                width: 85%;
+            }
+    
+            .music-lyrics, .music-comment {
+                width: 85%;
+            }
+        }
+    
+        .footer-listen-music {
+            justify-content: center;
+            .music-info {
+                display: none;
+            }
+
+            .music-control {
+                .show-content-icon {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .react-listen-music {
+    
+        .footer-listen-music {
+            .music-control {
+                audio {
+                    width: 200px;
+                }
+
+                i {
+                    font-size: 13px;
+                }
+
+                .next-btn {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+

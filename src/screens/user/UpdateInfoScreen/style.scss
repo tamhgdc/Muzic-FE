@@ -1,0 +1,72 @@
+.update-user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        .update-user {
+            display: flex;
+
+            .image-upload {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 100%;
+                }
+
+                .file-input-label {
+                    display: block;
+                    margin: auto;
+                    width: 240px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    text-align: center;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .update-form {
+                margin-left: 100px;
+                width: 100%;
+                justify-content: center;
+    
+                label {
+                    font-size: 18px;
+                    font-weight: 450;
+                    color: #094c72;
+                }
+    
+                textarea {
+                    resize: none;
+                    height: 250px;
+                }
+    
+                button {
+                    margin: auto;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .login-title {
+            text-align: center;
+            
+            span {
+                color: rgb(71, 110, 160);
+            }
+        }
+}
+
+@media (max-width: 700px) {
+    .update-user {
+        flex-direction: column;
+        align-items: center;
+
+        .update-form {
+            margin-left: 0px !important;
+        }
+    }
+}

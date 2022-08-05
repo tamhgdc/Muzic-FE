@@ -1,0 +1,53 @@
+.login-user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .login-content {
+        width: 300px;
+
+        .login-title {
+            text-align: center;
+            
+            span {
+                color: rgb(71, 110, 160);
+            }
+        }
+
+
+        .login-form {
+            width: 100%;
+
+            label {
+                font-size: 18px;
+                font-weight: 450;
+                color: #094c72;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            textarea {
+                resize: none;
+                height: 250px;
+            }
+
+            button {
+                margin: auto;
+                font-size: 16px;
+            }
+        }
+
+        .navigate-register {
+            text-align: center;
+            margin-top: 10px;
+
+            &:hover {
+                text-decoration: underline;
+                font-style: italic;
+                cursor: pointer;
+            }
+        }
+    }
+}

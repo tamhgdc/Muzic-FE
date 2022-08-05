@@ -1,0 +1,54 @@
+.register-user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .register-content {
+        width: 300px;
+
+        .register-title {
+            text-align: center;
+            
+            span {
+                color: rgb(71, 110, 160);
+            }
+        }
+
+
+        .register-form {
+            width: 100%;
+
+            label {
+                font-size: 18px;
+                font-weight: 450;
+                color: #094c72;
+                margin: 5px 0px;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            textarea {
+                resize: none;
+                height: 250px;
+            }
+
+            button {
+                margin: auto;
+                font-size: 16px;
+            }
+        }
+
+        .navigate-login {
+            text-align: center;
+            margin-top: 10px;
+
+            &:hover {
+                text-decoration: underline;
+                font-style: italic;
+                cursor: pointer;
+            }
+        }
+    }
+}

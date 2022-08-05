@@ -1,0 +1,183 @@
+.react-list-music {
+    padding: 30px 0px 30px;
+    margin: 0px auto;
+    width: 70%;
+    margin-bottom: 20px;
+    .title-list-music {
+        font-size: 30px;
+        color: #094c72;
+    }
+    hr {
+        margin: 10px 0px;
+    }
+    .list-music {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        overflow-y: overlay;
+
+        .music-card {
+            width: 24%;
+            margin: 10px 0.5%;
+            display: flex;
+            flex-direction: column;
+
+            .container-image-music {
+                position: relative;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                }
+    
+                .icon-play-music {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 150px;
+                    top: 49%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    color: white;
+                    font-size: 40px;
+                    border: none;
+                    cursor: pointer;
+                    text-align: center;
+                    background-color: #dadada4a;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+            }
+
+            .container-image-music:hover {
+                .icon-play-music {
+                    display: flex;
+                }
+            }
+
+            .music-card-name {
+                font-weight: 500;
+            }
+
+            .music-card-name:hover {
+                color: rgb(32, 182, 219);
+                cursor: pointer;
+            }
+
+            .music-card-singer {
+                font-size: 14px;
+                padding: 5px 0px;
+                color: #a5abb1;
+            }
+
+            .music-card-action {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+                font-size: 14px;
+                color: rgb(46, 157, 177);
+
+                i:hover {
+                    transform: scale(1.3);
+                    cursor: pointer;
+                }
+            }
+        }
+        .pagination {
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    
+}
+
+@media (max-width: 1250px) {
+
+    .user-page {
+        padding: 50px 20px 30px;
+    }
+
+    .react-list-music {
+        width: 60%;
+
+        .list-music {
+            .music-card {
+                width: 32%;
+            }
+        }
+    }
+
+    .react-play-list {
+        width: 32% !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .react-list-music {
+        width: 60%;
+    }
+}
+
+@media (max-width: 950px) {
+    .react-list-music {
+        width: 60%;
+
+        .list-music {
+            .music-card {
+                width: 49%;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+
+    .user-page {
+        flex-direction: column;
+    }
+
+    .react-list-music {
+        width: 95%;
+
+        .list-music {
+            .music-card {
+                width: 49%;
+            }
+        }
+    }
+
+    .react-play-list {
+        width: 95% !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .react-list-music {
+        width: 98%;
+
+        .list-music {
+            .music-card {
+                width: 49%;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .react-list-music {
+        width: 98%;
+
+        .list-music {
+            .music-card {
+                width: 99%;
+            }
+        }
+    }
+}
